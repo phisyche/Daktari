@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h1= title
+    p Welcome to #{title}
+    // search start here
+    .search
+      i  
+      .s-bar
+        form
+          input(type='text' value='Symptoms...' onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Symptoms...';}")
+          input(type='submit' value='Search')
+    // search end here
+    .copyright
+      p
+        | 2018 Daktari.ai All rights reserved
